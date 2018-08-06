@@ -4,7 +4,7 @@ import CommentList from 'components/CommentList';
 import { Route,Link } from 'react-router-dom';
 import {connect } from 'react-redux';
 import * as actions from 'actions'
-import { changeAuth } from '../actions';
+// import { changeAuth } from '../actions';
 class App extends Component {
 
   renderButton(){
