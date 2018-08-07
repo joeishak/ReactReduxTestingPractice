@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 
 class CommentList extends Component {
-
     renderComments(){
-        return  this.props.comments.map(comment =>{
+        let arr =  this.props.comments.map(comment =>{
             return <li key={comment}> {comment} </li>
-        })
+        });
+        return arr;
     
     }
     render() {
@@ -23,6 +23,7 @@ class CommentList extends Component {
     }
 }
 function mapStateToProps(state) {
+    console.log(state);
     return { comments: state.comments };
 }
 
