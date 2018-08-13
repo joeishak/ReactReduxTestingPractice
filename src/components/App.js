@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import CommentBox from 'components/CommentBox';
 import CommentList from 'components/CommentList';
+import Navigation from 'components/Navigation/Navigation';
+import CustomAccordion from 'components/Accordion/CustomAccordion';
 import { Route,Link } from 'react-router-dom';
 import {connect } from 'react-redux';
 import * as actions from 'actions'
@@ -29,7 +31,7 @@ class App extends Component {
           <Link to="/">Home</Link>
         </li>
         <li>
-        <Link to="/post">Post a Comment</Link>
+          <Link to="/post">Post a Comment</Link>
         </li>
         <li>
           {this.renderButton()}
@@ -40,9 +42,11 @@ class App extends Component {
   render(){ return (
     
     <div> 
+      <Navigation> </Navigation>
       {this.renderHeader()}
       <Route path = "/post" component ={CommentBox} />
       <Route path = "/" exact component ={CommentList} />
+      <CustomAccordion />
     </div>
   )
 }
