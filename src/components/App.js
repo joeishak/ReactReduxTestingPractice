@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import CommentBox from 'components/CommentBox';
 import CommentList from 'components/CommentList';
 import Navigation from 'components/Navigation/Navigation';
-import CustomAccordion from 'components/Accordion/CustomAccordion';
 import { Route,Link } from 'react-router-dom';
 import {connect } from 'react-redux';
-import * as actions from 'actions'
+import * as actions from 'actions';
+import KendoPanelBar from 'components/KendoPanelBar/KendoPanelBar';
+import KendoGrid from 'components/KendoGrid/KendoGrid';
 // import { changeAuth } from '../actions';
 class App extends Component {
 
@@ -43,11 +44,15 @@ class App extends Component {
     
     <div> 
       <Navigation> </Navigation>
-      {this.renderHeader()}
+      {/* {this.renderHeader()}
       <Route path = "/post" component ={CommentBox} />
-      <Route path = "/" exact component ={CommentList} />
-      <CustomAccordion />
+      <Route path = "/" exact component ={CommentList} /> */}
+        <KendoPanelBar > 
+    </KendoPanelBar >
+    <KendoGrid> 
+      </KendoGrid>
     </div>
+  
   )
 }
 }
