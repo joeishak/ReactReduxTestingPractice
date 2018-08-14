@@ -5,8 +5,14 @@ import Navigation from 'components/Navigation/Navigation';
 import { Route,Link } from 'react-router-dom';
 import {connect } from 'react-redux';
 import * as actions from 'actions';
+
+// Kendo Components
 import KendoPanelBar from 'components/KendoPanelBar/KendoPanelBar';
 import KendoGrid from 'components/KendoGrid/KendoGrid';
+import KendoButton from 'components/KendoButton/KendoButton';
+import KendoSwitch from 'components/KendoSwitch/KendoSwitch';
+import KendoNumericTextBox from 'components/KendoNumericTextBox/KendoNumericTextBox';
+import KendoInput from 'components/KendoInput/KendoInput';
 // import { changeAuth } from '../actions';
 class App extends Component {
 
@@ -51,6 +57,10 @@ class App extends Component {
     </KendoPanelBar >
     <KendoGrid> 
       </KendoGrid>
+      <KendoButton />
+      <KendoSwitch />
+      <KendoInput />
+      <KendoNumericTextBox />
     </div>
   
   )
