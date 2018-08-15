@@ -4,9 +4,16 @@ import ReactDOM from 'react-dom';
 
 
 class KendoButton extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            primary: props.primary || true,
+            disabled: props.disabled || true
+        }
+    }
     render(){
         return(
-            <Button primary={true} disabled={false}>Browse</Button>
+            <Button primary={this.state.primary} disabled={this.state.disabled}>Browse</Button>
         )
     }
 }
